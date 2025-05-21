@@ -1,0 +1,15 @@
+import seaborn as sns
+import matplotlib.pyplot as pt
+df=sns.load_dataset('titanic')
+#sns.barplot(x='who',y='fare',data=df)
+sns.set_theme(style="darkgrid")
+#a=sns.stripplot(x=df["who"])
+tips=sns.load_dataset("tips")
+#a=sns.stripplot(x=tips["total_bill"])
+#a=sns.swarmplot(x=tips["total_bill"])
+#a=sns.boxplot(x=tips["total_bill"])
+#sns.countplot(x='day',data=tips)
+#sns.pointplot(x="sex",y="total_bill",data=tips)
+sns.lmplot(x='total_bill',y='tip',data=tips)
+#print(tips)
+pt.show()
